@@ -13,8 +13,6 @@ Setup
 
 You'll need a working node.js local environment, or at the very least npm installed.
 
-Run the localSetup.sh script to setup a MacOS environment from scratch. Or simply run the below commands if your environment is already setup.
-
 To install the necessary packages run: (Done in localSetup.sh script)
 
     $ npm install aws-sdk
@@ -38,6 +36,8 @@ or
 
 where "function" is the name of your function. Can be anything.
 
+If you're on MacOs you can simply select both the node_modules folder and .js file that you want to upload, right click, and choose "Compress 2 items".
+
 **Small gotcha**
 
-You'll see that the files are named according to what they actually do, e.g. userLogin.js or userSignUp.js. When specifying the 'handler' for your function on the AWS console or the CLI, be sure to use the correct file name. By default the handler will be specified as "index.handler", which means Lambda will look for a file called "index.js". If, for example, you're deploying userLogin.js, the handler will be "userLogin.handler".
+You'll see that the files are named according to what they actually do, e.g. userLogin.js or userSignUp.js. When specifying the 'handler' for your function on the AWS console or the CLI, be sure to use the correct file name. By default the handler will be specified as "index.handler", which means Lambda will look for a file called "index.js". If, for example, you're deploying userLogin.js, the handler should be "userLogin.handler".
