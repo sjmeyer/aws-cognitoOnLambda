@@ -8,6 +8,8 @@ Why run Cognito on Lambda?
 
 I did this in my application because I didn't want to put the UserPoolId and ClientId in the HTML or JavaScript that goes to the front end. I alsso wasn't keen on including the Cognito js libraries in my project, since it would add to page load time. Running a server for this wasn't an option either, hence, stick it on Lambda.
 
+Once it's on Lambda you can call the function through something like API Gateway. You'll have to create an API and just hit the endpoint from an HTML form submit action or ajax call.
+
 Setup
 -----
 
